@@ -5,6 +5,9 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+var port = process.env.PORT || 8080;
+console.log('Setting port to %s',port);
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
